@@ -21,7 +21,7 @@ function getEvents() {
 
         events = jsonData
 
-        return jsonData
+        return events
     });
 }
 
