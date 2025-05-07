@@ -1,8 +1,34 @@
 <%- include('../partials/header') %>
 
-<div class="container">
+<div class="title">
     <h1>Welcome to the Community Portal</h1>
+</div>
+
+<div class="main">
     <p>This is where you'll find updates and upcoming events.</p>
 </div>
 
-<%- include('../partials/footer')  %>
+<!-- arrow to appear when scroling down -->
+<div id="scroll-arrow" class="scroll-arrow hidden">
+  ↓
+</div>
+
+<!-- find a way to add it to the js file -->
+<script>
+    function scrollToContent() {
+      document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    }
+  
+    window.addEventListener('scroll', () => {
+      const arrow = document.getElementById('scroll-arrow');
+      if (window.scrollY > 100) {
+        arrow.classList.remove('hidden');
+        arrow.classList.add('visible');
+      } else {
+        arrow.classList.remove('visible');
+        arrow.classList.add('hidden');
+      }
+    });
+</script>
+
+<%- include('../partials/footer') %>

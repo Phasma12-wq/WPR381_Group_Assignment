@@ -4,6 +4,40 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url('/images/your-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.scroll-arrow {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: relative;
+}
+
+.scroll-arrow.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  padding: 100px 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
 .nav-bar {
   list-style: none;
   display: flex;
@@ -38,4 +72,30 @@
 .nav-bar a:hover {
   background-color: #f2f2f2;
   color: #000;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+.site-footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
