@@ -7,6 +7,10 @@ var contacts = [];
 
 //functions to load data onto arrays
 function getEvents() {
+    if (events) {
+        return events
+    }
+    
     fs.readFile('events.json' , 'utf-8', (err, data) => {
         if (err) {
             console.error('Error reading the file: ', err);
@@ -15,12 +19,16 @@ function getEvents() {
 
         const jsonData = JSON.parse(data);
 
+        events = jsonData
+
         return jsonData
     });
 }
 
 function getAbout() {
-    about
+    if(about) {
+        return about
+    }
     
     fs.readFile('about.json' , 'utf-8', (err, data) => {
         if (err) {
@@ -30,7 +38,9 @@ function getAbout() {
 
         const jsonData = JSON.parse(data);
 
-        return jsonData
+        about =  jsonData
+
+        return about
     });
 }
 
@@ -52,6 +62,10 @@ function writeToAbout(name, surname, phone){
 }
 
 function getContact() {
+    if (contacts) {
+        return contacts
+    }
+    
     fs.readFile('contact.json' , 'utf-8', (err, data) => {
         if (err) {
             console.error('Error reading the file: ', err);
@@ -60,6 +74,8 @@ function getContact() {
 
         const jsonData = JSON.parse(data);
 
-        return jsonData
+        contacts =  jsonData
+
+        return contacts
     });
 }
