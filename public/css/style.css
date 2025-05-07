@@ -1,0 +1,27 @@
+.nav-bar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  background-color: #333;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.nav-bar li {
+  margin: 0;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-bar a.active {
+  text-decoration: underline;
+  color: yellow;
+}
+
+.nav-bar a:hover {
+  color: orange;
+}

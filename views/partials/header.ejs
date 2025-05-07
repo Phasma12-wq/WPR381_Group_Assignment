@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal</title>
-    <link rel="'stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <headers>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">about</a>
-            <a href="/events">events</a>
-            <a href="/contact">contact</a>
-        </nav>
+            <ul class="nav-bar">
+              <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+              <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
+              <li><a href="/events" class="<%= page === 'events' ? 'active' : '' %>">Events</a></li>
+              <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+            </ul>
     </headers>
