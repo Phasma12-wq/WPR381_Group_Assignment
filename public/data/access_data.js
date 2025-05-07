@@ -44,12 +44,14 @@ function getAbout() {
     });
 }
 
-function writeToAbout(name, surname, phone){
+function writeToContacts(name, email, message){
     const contact = {
-        firstName: name,
-        lastName: surname,
-        Phone: phone
+        Name: name,
+        Email: email,
+        Message: message
     }
+
+    contacts.push(contact)
 
     const jsonData = JSON.stringify(contact, null, 4)
 
