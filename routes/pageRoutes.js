@@ -3,20 +3,20 @@
 const express = require('express');
 const router = express.Router();
 
-// const team = [
-//   { name: "FOR NOW KNOW", role: "THIS IS AN EXAMPLE" },
-//   { name: "Dieter", role: "Team Lead" },
-//   { name: "Keitumetse", role: "Backend Dev" },
-//   { name: "Magotso", role: "Data Manager" },
-//   { name: "Mogau", role: "Docs" }
-// ];
+const team = [
+  { name: "FOR NOW KNOW", role: "THIS IS AN EXAMPLE" },
+  { name: "Name", role: "Team Lead" },
+  { name: "Name", role: "Backend Dev" },
+  { name: "Name", role: "Data Manager" },
+  { name: "Name", role: "Docs" }
+];
 
-// const events = [
-//   { title: "Park Cleanup", date: "2025-05-10", location: "Greenfield Park", image: "/images/cleanup.jpg" },
-//   { title: "Community Braai", date: "2025-05-20", location: "Eastlynn Hall", image: "/images/braai.jpg" }
-// ];
+const events = [
+{ title: "Park Cleanup", date: "2025-05-10", location: "Greenfield Park", image: "/images/cleanup.jpg" },
+{ title: "Community Braai", date: "2025-05-20", location: "Eastlynn Hall", image: "/images/braai.jpg" }
+];
 
-// const messages = [];
+const messages = [];
 
 // Home
 router.get('/', (req, res) => {
