@@ -23,6 +23,7 @@ router.post('/contact', (req, res) => {
     const formData = req.body;
     
     data_access.writeToContacts(formData.name, formData.email, formData.message)
+    console.log("Contact information saved to array")
 });
 
 module.exports = router;

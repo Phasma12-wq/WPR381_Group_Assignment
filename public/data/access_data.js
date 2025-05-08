@@ -81,3 +81,28 @@ function getContact() {
         return contacts
     });
 }
+
+/*
+    JSON Object definition:
+
+    The data retrieved from the arrays are stored in JSON object format, so do the following to 
+    access the informations properties
+
+    - getAbout:
+        - temp[i].firstName
+        - temp[i].lastName
+        - temp[i].phone
+        - temp[i].email
+    
+    - getContact:
+        - temp[i].name
+        - temp[i].email
+        - temp[i].message
+    
+    - getEvents
+        - temp[i].title
+        - temp[i].date
+        - temp[i].location
+        - temp[i].image_location
+
+*/
