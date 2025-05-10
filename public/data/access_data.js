@@ -1,100 +1,55 @@
 const fs = require('fs')
 
-//Arrays for data access
-var about = [];
-var events = [];
-var contacts = [];
-
-//functions to load data onto arrays on startup
-function getEvents() {
-    if (events) {
-        return events
-    }
-    
-    fs.readFile('events.json' , 'utf-8', (err, data) => {
-        if (err) {
-            console.error('Error reading the file: ', err);
-            return;
-        }
-
-        const jsonData = JSON.parse(data);
-
-        console.log(`Data loaded from events.json: ${jsonData}`)
-        events = jsonData
-
-        return events
-    });
-}
-
-function getAbout() {
-    if(about) {
-        return about
-    }
-    
-    fs.readFile('about.json' , 'utf-8', (err, data) => {
-        if (err) {
-            console.error('Error reading the file: ', err);
-            return;
-        }
-
-        const jsonData = JSON.parse(data);
-        console.log(`Data loaded from about.json: ${jsonData}`)
-
-        about =  jsonData
-
-        return about
-    });
-}
-
 function writeToContacts(name, email, message){
-    const contact = {
-        Name: name,
-        Email: email,
-        Message: message
-    }
-
-    contacts.push(contact)
-
-    const jsonData = JSON.stringify(contact, null, 4)
-
-    fs.writeFile('about.json', jsonData, 'utf-8', (err) => {
+    fs.readFile('./public/data/contact.json', 'utf-8', (err,jsonData) => {
         if (err) {
             console.error('Error writing to file: ', err);
             return;
         }
+        
+        let contacts = JSON.parse(jsonData)
+
+        const contact = {
+            Name: name,
+            Email: email,
+            Message: message
+        };
+
+        contacts.push(contact);
+
+        fs.writeFile('./public/data/contact.json', JSON.stringify(contacts, null, 4), (err) => {
+            if (err) {
+                console.error('Error writing to file: ', err);
+                return;
+            }
+        });
+
+        return contacts
     });
     
 }
 
-function getContact() {
-    if (contacts) {
-        return contacts
-    }
-    
-    fs.readFile('contact.json' , 'utf-8', (err, data) => {
-        if (err) {
-            console.error('Error reading the file: ', err);
-            return;
-        }
-
+async function getContact() {
+    try {
+        const data = await fs.readFile('./public/data/contact.json', 'utf-8');
         const jsonData = JSON.parse(data);
-        console.log(`Data loaded from contact.json: ${jsonData}`)
 
-        contacts =  jsonData
+        console.log(`Data loaded from events.json: ${jsonData}`)
 
-        return contacts
-    });
+        return jsonData;
+    } catch (error) {
+        console.error('Error reading the file: ', error);
+        return;
+    }
 }
 
 module.exports = {
     getAbout,
     getEvents,
     writeToContacts,
-    getContact,
-    about,
-    events,
-    contacts
+    getContact
 }
+
 
 /*
     JSON Object definition:

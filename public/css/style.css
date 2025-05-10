@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+top-nav-bar {
   background-image: url('/images/your-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,7 +36,6 @@ body {
   font-weight: bold;
   color: #333;
 }
-
 
 .nav-bar {
   list-style: none;

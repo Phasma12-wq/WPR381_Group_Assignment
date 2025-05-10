@@ -8,6 +8,8 @@ const pageRoutes = require("./routes/pageRoutes");
 const app = express();
 const port = 3000;
 
+//used to allow the server to accept form data
+// and parse JSON data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

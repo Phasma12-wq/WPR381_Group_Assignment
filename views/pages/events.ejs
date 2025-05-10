@@ -1,4 +1,6 @@
-<table>
+<%- include('../partials/header') %>
+
+<table style="margin-top: 5%; margin-left: 5%;">
     <thead>
         <tr>
             <th>
@@ -7,15 +9,17 @@
         </tr>
     </thead>
     <tbody>
-        <% event_data.forEach(event => { %>
+        <% events.forEach(event => { %>
         <tr>
             <td>
-                <h2><%= event.title %></h2>
-                <p>Date: <%= event.date %></p>
-                <p>Location: <%= event.location %></p>
+                <h2><%= events.title %></h2>
+                <p>Date: <%= events.date %></p>
+                <p>Location: <%= events.location %></p>
             </td>
             
         </tr>
         <% }) %>
     </tbody>
 </table>
+
+<%- include('../partials/footer') %>

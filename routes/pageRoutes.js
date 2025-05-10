@@ -2,21 +2,20 @@
 
 const express = require('express');
 const router = express.Router();
-const { getAbout, getEvents, writeToContacts, getContact } = require('../public/data/access_data.js')
 
+var contacts = [];
 
-/*
 const team = [
-  { name: "FOR NOW KNOW", role: "THIS IS AN EXAMPLE" },
   { name: "Name", role: "Team Lead" },
   { name: "Name", role: "Backend Dev" },
   { name: "Name", role: "Data Manager" },
   { name: "Name", role: "Docs" }
 ];
 
-const messages = [];
-*/
-
+const events = [
+    { "title": "Park Cleanup", "date": "2025-05-10", "location": "Greenfield Park", "image": "/images/cleanup.jpg" },
+    { "title": "Community Braai", "date": "2025-05-20", "location": "Eastlynn Hall", "image": "/images/braai.jpg" }
+]
 
 // Home
 router.get('/', (req, res) => {
@@ -25,16 +24,12 @@ router.get('/', (req, res) => {
 
 // About
 router.get('/about', (req, res) => {
-  let team_data = getAbout();
-
-  res.render('pages/about', { team_data, page: 'about' });
+  res.render('pages/about', { team, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  event_data = getEvents();
-
-  res.render('pages/events', { event_data, page: 'events' });
+  res.render('pages/events', { events, page: 'events' });
 });
 
 // Contact (GET)
@@ -47,20 +42,30 @@ router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   
   // Validate input
-  
   if (name && email && message) {
+    const contact = {
+            Name: name,
+            Email: email,
+            Message: message
+        };
     
-    writeToContacts(name, email, message);
+    contacts.push(contact);
+
+    console.log('Contact successfully added')
+
+    console.log('Contact List')
+    contacts.forEach(contact => {
+      console.log(`Name: ${contact.Name}, Email: ${contact.Email}, Message: ${contact.Message}`);
+    })
 
     res.redirect('/thankyou');
   } else {
     return res.status(400).send('All fields are required.');
   }
-
 });
 
 // Thank You
-router.get('/thankyou', (req, res) => {
+ router.get('/thankyou', (req, res) => {
   res.render('pages/thankyou', { page: '' });
 });
 
