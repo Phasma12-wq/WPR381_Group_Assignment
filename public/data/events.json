@@ -1,8 +1,4 @@
 [
-    {"title": "", "date": "", "location": "", "image_location": ""},
-    {"title": "", "date": "", "location": "", "image_location": ""},
-    {"title": "", "date": "", "location": "", "image_location": ""},
-    {"title": "", "date": "", "location": "", "image_location": ""},
-    {"title": "", "date": "", "location": "", "image_location": ""},
-    {"title": "", "date": "", "location": "", "image_location": ""}
+    { "title": "Park Cleanup", "date": "2025-05-10", "location": "Greenfield Park", "image_location": "/images/cleanup.jpg" },
+    { "title": "Community Braai", "date": "2025-05-20", "location": "Eastlynn Hall", "image_location": "/images/braai.jpg" }
 ]

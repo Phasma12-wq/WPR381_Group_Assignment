@@ -14,11 +14,6 @@ const team = [
   { name: "Name", role: "Docs" }
 ];
 
-const events = [
-{ title: "Park Cleanup", date: "2025-05-10", location: "Greenfield Park", image: "/images/cleanup.jpg" },
-{ title: "Community Braai", date: "2025-05-20", location: "Eastlynn Hall", image: "/images/braai.jpg" }
-];
-
 const messages = [];
 */
 
@@ -32,14 +27,14 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
   let team_data = data_access.getAbout();
 
-  res.render('pages/about', { team: team_data, page: 'about' });
+  res.render('pages/about', { team_data, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
   event_data = data_access.getEvents();
 
-  res.render('pages/events', { events: event_data, page: 'events' });
+  res.render('pages/events', { event_data, page: 'events' });
 });
 
 // Contact (GET)

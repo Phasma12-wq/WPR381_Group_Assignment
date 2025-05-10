@@ -61,6 +61,7 @@ function writeToContacts(name, email, message){
             return;
         }
     });
+    
 }
 
 function getContact() {

@@ -1,8 +1,6 @@
 [
-    {"firstName": "", "lastName": "", "phone": "", "email": ""},
-    {"firstName": "", "lastName": "", "phone": "", "email": ""},
-    {"firstName": "", "lastName": "", "phone": "", "email": ""},
-    {"firstName": "", "lastName": "", "phone": "", "email": ""},
-    {"firstName": "", "lastName": "", "phone": "", "email": ""},
-    {"firstName": "", "lastName": "", "phone": "", "email": ""}
+    { "name": "Name", "role": "Team Lead" },
+    { "name": "Name", "role": "Backend Dev" },
+    { "name": "Name", "role": "Data Manager" },
+    { "name": "Name", "role": "Docs" }
 ]

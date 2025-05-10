@@ -1,2 +1,34 @@
 <h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
+<table>
+    <thead>
+        <tr>
+            <th>
+                <h1>Upcoming Events</h1>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% event_data.forEach(event => { %>
+        <tr>
+            <td>
+                <p>
+                    <h2>
+                        <%= event_data.title %>
+                    </h2>
+
+                    <br>
+
+                    Date: <%= event_data.description %>
+
+                    <br>
+
+                    Location: <%= event_data.location %>
+                </p>
+            </td>
+            <td>
+                <img src="<%= event.image_location %>" >
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
