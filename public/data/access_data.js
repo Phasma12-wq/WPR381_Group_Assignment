@@ -5,7 +5,7 @@ var about = [];
 var events = [];
 var contacts = [];
 
-//functions to load data onto arrays
+//functions to load data onto arrays on startup
 function getEvents() {
     if (events) {
         return events
