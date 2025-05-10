@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const data_access = require('./public/data/access_data.js')
 
+
+/*
 const team = [
   { name: "FOR NOW KNOW", role: "THIS IS AN EXAMPLE" },
   { name: "Name", role: "Team Lead" },
@@ -18,6 +20,8 @@ const events = [
 ];
 
 const messages = [];
+*/
+
 
 // Home
 router.get('/', (req, res) => {
@@ -26,12 +30,16 @@ router.get('/', (req, res) => {
 
 // About
 router.get('/about', (req, res) => {
-  res.render('pages/about', { team, page: 'about' });
+  let team_data = data_access.getAbout();
+
+  res.render('pages/about', { team: team_data, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  res.render('pages/events', { events, page: 'events' });
+  event_data = data_access.getEvents();
+
+  res.render('pages/events', { events: event_data, page: 'events' });
 });
 
 // Contact (GET)
@@ -42,22 +50,20 @@ router.get('/contact', (req, res) => {
 // Contact (POST)
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
+  
+  // Validate input
   if (name && email && message) {
     messages.push({ name, email, message });
+  } else {
+    return res.status(400).send('All fields are required.');
   }
+
   res.redirect('/thankyou');
 });
 
 // Thank You
 router.get('/thankyou', (req, res) => {
   res.render('pages/thankyou', { page: '' });
-});
-
-router.post('/contact', (req, res) => {
-    const formData = req.body;
-    
-    data_access.writeToContacts(formData.name, formData.email, formData.message)
-    console.log("Contact information saved to array")
 });
 
 module.exports = router;
