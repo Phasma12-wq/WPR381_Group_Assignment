@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const data_access = require('./public/data/access_data.js')
+const { getAbout, getEvents, writeToContacts, getContact } = require('../public/data/access_data.js')
 
 
 /*
@@ -20,19 +20,19 @@ const messages = [];
 
 // Home
 router.get('/', (req, res) => {
-  res.render('pages/home', { page: 'home' });
+  res.render('./pages/home', { page: 'home' });
 });
 
 // About
 router.get('/about', (req, res) => {
-  let team_data = data_access.getAbout();
+  let team_data = getAbout();
 
   res.render('pages/about', { team_data, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  event_data = data_access.getEvents();
+  event_data = getEvents();
 
   res.render('pages/events', { event_data, page: 'events' });
 });
@@ -47,13 +47,16 @@ router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   
   // Validate input
+  
   if (name && email && message) {
-    messages.push({ name, email, message });
+    
+    writeToContacts(name, email, message);
+
+    res.redirect('/thankyou');
   } else {
     return res.status(400).send('All fields are required.');
   }
 
-  res.redirect('/thankyou');
 });
 
 // Thank You

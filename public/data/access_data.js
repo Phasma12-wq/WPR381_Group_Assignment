@@ -19,6 +19,7 @@ function getEvents() {
 
         const jsonData = JSON.parse(data);
 
+        console.log(`Data loaded from events.json: ${jsonData}`)
         events = jsonData
 
         return events
@@ -37,6 +38,7 @@ function getAbout() {
         }
 
         const jsonData = JSON.parse(data);
+        console.log(`Data loaded from about.json: ${jsonData}`)
 
         about =  jsonData
 
@@ -76,11 +78,22 @@ function getContact() {
         }
 
         const jsonData = JSON.parse(data);
+        console.log(`Data loaded from contact.json: ${jsonData}`)
 
         contacts =  jsonData
 
         return contacts
     });
+}
+
+module.exports = {
+    getAbout,
+    getEvents,
+    writeToContacts,
+    getContact,
+    about,
+    events,
+    contacts
 }
 
 /*
