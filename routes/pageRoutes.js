@@ -3,8 +3,11 @@
 const express = require('express');
 const router = express.Router();
 
+
+//In-memory array for contacts
+var contacts = [];
+
 const team = [
-  { name: "FOR NOW KNOW", role: "THIS IS AN EXAMPLE" },
   { name: "Name", role: "Team Lead" },
   { name: "Name", role: "Backend Dev" },
   { name: "Name", role: "Data Manager" },
@@ -12,25 +15,23 @@ const team = [
 ];
 
 const events = [
-{ title: "Park Cleanup", date: "2025-05-10", location: "Greenfield Park", image: "/images/cleanup.jpg" },
-{ title: "Community Braai", date: "2025-05-20", location: "Eastlynn Hall", image: "/images/braai.jpg" }
-];
-
-const messages = [];
+    { "title": "Park Cleanup", "date": "2025-05-10", "location": "Greenfield Park", "image": "/images/cleanup.jpg" },
+    { "title": "Community Braai", "date": "2025-05-20", "location": "Eastlynn Hall", "image": "/images/braai.jpg" }
+]
 
 // Home
 router.get('/', (req, res) => {
-  res.render('pages/home', { page: 'home' });
+  res.render('./pages/home', { page: 'home' });
 });
 
 // About
 router.get('/about', (req, res) => {
-  res.render('pages/about', { team, page: 'about' });
+  res.render('pages/about', { data: team, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  res.render('pages/events', { events, page: 'events' });
+  res.render('pages/events', { data: events, page: 'events' });
 });
 
 // Contact (GET)
@@ -41,14 +42,34 @@ router.get('/contact', (req, res) => {
 // Contact (POST)
 router.get('/contact', (req, res) => {
   const { name, email, message } = req.body;
+  
+  // Validate input
   if (name && email && message) {
-    messages.push({ name, email, message });
+    const contact = {
+            Name: name,
+            Email: email,
+            Message: message
+        };
+    
+    contacts.push(contact);
+
+    console.log('Contact successfully added')
+
+    //logs the data currently in the in-memory array
+    console.log('Contact List')
+    contacts.forEach(contact => {
+      console.log(`Name: ${contact.Name}, Email: ${contact.Email}, Message: ${contact.Message}`);
+    })
+
+    res.redirect('/thankyou');
+  } else {
+    return res.status(400).send('All fields are required.');
   }
-  res.redirect('/thankyou');
 });
 
 // Thank You
-router.post('/thankyou', (req, res) => {
+
+ router.get('/thankyou', (req, res) => {
   res.render('pages/thankyou', { page: '' });
 });
 
