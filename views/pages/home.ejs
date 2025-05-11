@@ -2,16 +2,16 @@
 <link rel="stylesheet" href="public/css/style.css">
 
 <!-- Main title for home page-->
-<section class="hero">
-  <div class="hero-overlay">
-    <div class="hero-brand">
-      <img src="images/logo.png" alt="StreetSync Logo" class="hero-logo">
-      <h1 class="hero-title">StreetSync</h1>
+<section class="main-title">
+  <div class="title-overlay">
+    <div class="title-brand">
+      <img src="images/logo.png" alt="StreetSync Logo" class="title-logo">
+      <h1 class="main-title-name" onclick="scrollToWelcome()">StreetSync</h1>
     </div>
   </div>
 </section>
 
-<div class="welcome-message">
+<div class="welcome-message" id="welcome">
   <h1>Welcome to StreetSync</h1>
   <p>Your pit stop for everything cars, from community meets and roaring races to street showcases and build diaries. Whether you're a gearhead, tuner, racer, or just love the sound of a turbo spool, you're in the right lane.</p>
   <p>Fuel your passion. Sync with the streets. Let's ride.</p>
@@ -46,20 +46,9 @@
 
 <!-- find a way to add it to the js file -->
 <script>
-    function scrollToContent() {
-      document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    function scrollToWelcome() {
+      document.getElementById("welcome").scrollIntoView({ behavior: "smooth" });
     }
-  
-    window.addEventListener('scroll', () => {
-      const arrow = document.getElementById('scroll-arrow');
-      if (window.scrollY > 100) {
-        arrow.classList.remove('hidden');
-        arrow.classList.add('visible');
-      } else {
-        arrow.classList.remove('visible');
-        arrow.classList.add('hidden');
-      }
-    });
 </script>
 
 <%- include('../partials/footer') %>
