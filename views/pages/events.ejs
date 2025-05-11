@@ -9,14 +9,14 @@
         </tr>
     </thead>
     <tbody>
-        <% events.forEach(event => { %>
+        <% data.forEach(event => { %>
         <tr>
             <td>
-                <h2><%= events.title %></h2>
-                <p>Date: <%= events.date %></p>
-                <p>Location: <%= events.location %></p>
+                <h2><%= event.title %></h2>
+                <p>Date: <%= event.date %></p>
+                <p>Location: <%= event.location %></p>
+                <img src="<%= event.image %>" width="200">
             </td>
-            
         </tr>
         <% }) %>
     </tbody>

@@ -1,5 +1,24 @@
 <%- include('../partials/header') %>
 
-<h1>About Us</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+                <h1>About Us</h1>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% data.forEach(member => { %>
+        <tr>
+            <td>
+                <h2><%= name.title %></h2>
+                <p>Role:<%= role.date %></p>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>

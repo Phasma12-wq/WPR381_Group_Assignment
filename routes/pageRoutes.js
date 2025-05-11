@@ -3,6 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
+
+//In-memory array for contacts
 var contacts = [];
 
 const team = [
@@ -24,12 +26,12 @@ router.get('/', (req, res) => {
 
 // About
 router.get('/about', (req, res) => {
-  res.render('pages/about', { team, page: 'about' });
+  res.render('pages/about', { data: team, page: 'about' });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  res.render('pages/events', { events, page: 'events' });
+  res.render('pages/events', { data: events, page: 'events' });
 });
 
 // Contact (GET)
@@ -53,6 +55,7 @@ router.post('/contact', (req, res) => {
 
     console.log('Contact successfully added')
 
+    //logs the data currently in the in-memory array
     console.log('Contact List')
     contacts.forEach(contact => {
       console.log(`Name: ${contact.Name}, Email: ${contact.Email}, Message: ${contact.Message}`);
