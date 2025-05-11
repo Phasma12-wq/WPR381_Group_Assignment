@@ -1,11 +1,32 @@
-<%- include('../partials/header') %>
+<!-- <form method="POST" action="/contact">
+    <input type="text" name="name" placeholder="Your Name" required /><br />
+    <input type="email" name="email" placeholder="Your Email" required /><br />
+    <textarea name="message" placeholder="Your Message" required></textarea><br />
+    <button type="submit">Send</button>
+</form> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include('../partials/header') %>
+</head>
+<body class="contact-body">
+    <div class="contacts">
+    <form method="POST" action="/contact">
+        <fieldset>
+        <legend>Contact Information</legend>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        </fieldset>
+        <fieldset>
+        <legend>Message</legend>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        </fieldset>
+        <button type="submit">Send</button>
+    </form>
+    </div>
 
-<h1 style="margin-left: 5%;">Contact Us</h1>
-<form method="POST" action="/contact" style="margin-left: 5%;">
-  <input type="text" name="name" placeholder="Your Name" required /><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
-  <button type="submit">Send</button>
-</form>
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
+</body>
+</html>

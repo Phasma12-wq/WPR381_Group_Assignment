@@ -1,24 +1,67 @@
 <%- include('../partials/header') %>
 
-<table>
-    <thead>
-        <tr>
-            <th>
-                <h1>About Us</h1>
-            </th>
-        </tr>
-    </thead>
+<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+</head>
+<body class="no-bg">
 
-    <tbody>
-        <% data.forEach(member => { %>
-        <tr>
-            <td>
-                <h2><%= name.title %></h2>
-                <p>Role:<%= role.date %></p>
-            </td>
-        </tr>
-        <% }) %>
-    </tbody>
-</table>
 
+    <!-- About Us Section -->
+<section class="intro-section">
+    <h2 class="intro-title">WE ARE [GROUP NAME]</h2>
+    <img src="/images/pit-stop-precision-stockcake.jpg" alt="Intro Image" class="intro-image">
+    <div class="intro-text-block">
+    <h3>ABOUT US</h3>
+    <hr>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque odit nemo adipisci deleniti, neque quod earum accusamus quam nisi dolor magni id doloremque officiis similique. Sequi expedita tenetur dolores laborum!
+    </p>
+    </div>
+</section>
+
+<!-- OUR TEAM -->
+    <section class="team-section">
+    <h2 class="section-title">OUR PIT CREW</h2>
+    <div class="team-grid">
+
+        <div class="team-card">
+        <img src="/images/tire-change.jpg" alt="Team Member 1">
+        <div class="team-info">
+            <h3>Ulrigh Oosthuizen</h3>
+            <p>Role</p>
+        </div>
+        </div>
+
+        <div class="team-card">
+        <img src="/images/tire-change.jpg" alt="Team Member 2">
+        <div class="team-info">
+            <h3>Gordon Mullin</h3>
+            <p>Role</p>
+        </div>
+        </div>
+
+        <div class="team-card">
+        <img src="/images/tire-change.jpg" alt="Team Member 3">
+        <div class="team-info">
+            <h3>Member 3</h3>
+            <p>Role</p>
+        </div>
+        </div>
+
+        <div class="team-card">
+        <img src="/images/tire-change.jpg" alt="Team Member 4">
+        <div class="team-info">
+            <h3>Member 4</h3>
+            <p>Role</p>
+        </div>
+        </div>
+
+    </div>
+    </section>
 <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,25 +1,67 @@
 <%- include('../partials/header') %>
+<link rel="stylesheet" href="public/css/style.css">
 
-<table style="margin-top: 5%; margin-left: 5%;">
-    <thead>
-        <tr>
-            <th>
-                <h1>Upcoming Events</h1>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <% data.forEach(event => { %>
-        <tr>
-            <td>
-                <h2><%= event.title %></h2>
-                <p>Date: <%= event.date %></p>
-                <p>Location: <%= event.location %></p>
-                <img src="<%= event.image %>" width="200">
-            </td>
-        </tr>
-        <% }) %>
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+    <section class="events-section">
 
+    <div class="event-row" id="GT3">
+        <img src="/images/GT3.jpg" alt="GT3 Events Photo">
+        <div class="event-info">
+        <h2>GT3 Race Event</h2>
+        <p>20 Participants</p>
+        <p>$40 per Ticket</p>
+        <a href="#" class="details-btn">View Details</a>
+        </div>
+    </div>
+
+    <div class="event-row reverse">
+        <div class="event-info">
+        <h2>F1 Race Event</h2>
+        <p>20 Participants</p>
+        <p>$100 per Ticket</p>
+        <a href="#" class="details-btn">View Details</a>
+        </div>
+        <img src="/images/cars_Lined_up2.jpg" alt="F1 Events Photo">
+    </div>
+
+    <div class="event-row">
+        <img src="/images/bristol-tp-3.jpg" alt="Nascar Events Photo">
+        <div class="event-info">
+        <h2>Nascar Race Event</h2>
+        <p>40 Participants</p>
+        <p>$50 per Ticket</p>
+        <a href="#" class="details-btn">View Details</a>
+        </div>
+    </div>
+
+    <div class="event-row reverse">
+        <div class="event-info">
+        <h2>Moto GP Event</h2>
+        <p>22 Participants</p>
+        <p>$40 per Ticket</p>
+        <a href="#" class="details-btn">View Details</a>
+        </div>
+        <img src="/images/bikes_Lines_up.jpg" alt="MotoGP Events Photo">
+    </div>
+
+    <div class="event-row">
+        <img src="/images/wrc.jpg" alt="WRC Events Photo">
+        <div class="event-info">
+        <h2>WRC Race Event</h2>
+        <p>80 Participants</p>
+        <p>$45 per Ticket</p>
+        <a href="#" class="details-btn">View Details</a>
+        </div>
+    </div>
+
+    </section>
+
+</body>
 <%- include('../partials/footer') %>
+</html>

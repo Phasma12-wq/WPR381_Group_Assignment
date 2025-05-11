@@ -1,34 +1,54 @@
 <%- include('../partials/header') %>
+<link rel="stylesheet" href="public/css/style.css">
 
-<div class="title">
-    <h1>Welcome to the Community Portal</h1>
-</div>
 <!-- Main title for home page-->
-<div class="main">
-    <p>This is where you'll find updates and upcoming events.</p>
+<section class="main-title">
+  <div class="title-overlay">
+    <div class="title-brand">
+      <img src="images/logo.png" alt="StreetSync Logo" class="title-logo">
+      <h1 class="main-title-name" onclick="scrollToWelcome()">StreetSync</h1>
+    </div>
+  </div>
+</section>
+
+<div class="welcome-message" id="welcome">
+  <h1>Welcome to StreetSync</h1>
+  <p>Your pit stop for everything cars, from community meets and roaring races to street showcases and build diaries. Whether you're a gearhead, tuner, racer, or just love the sound of a turbo spool, you're in the right lane.</p>
+  <p>Fuel your passion. Sync with the streets. Let's ride.</p>
 </div>
 
-<!-- arrow to appear when scroling down -->
-<div id="scroll-arrow" class="scroll-arrow hidden">
-  ↓
-</div>
+<section class="upcoming-events" id="upcoming">
+  <h2>Upcoming events will be displayed here</h2>
+</section>
+  
+<div class="grid-container">
+    <div class="grid-item1">
+      <a href="/about">About Us</a>
+    </div>
+    <div class="grid-item3"></div>
+    <div class="grid-item4"><video autoplay>
+      <source src="/images/flyby.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div class="grid-item5"></div>
+    <div class="grid-item6">
+      <div id="events">
+        <a href="/events">Events</a>
+      </div>
+    </div>
+    <div class="grid-item7"></div>
+    <div class="grid-item8">
+      <a href="/contact" id="contact">Contact US</a>
+    </div>
+    <div class="grid-item9"></div>
+    <div class="grid-item11"></div>
+  </div>
 
 <!-- find a way to add it to the js file -->
 <script>
-    function scrollToContent() {
-      document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    function scrollToWelcome() {
+      document.getElementById("welcome").scrollIntoView({ behavior: "smooth" });
     }
-  
-    window.addEventListener('scroll', () => {
-      const arrow = document.getElementById('scroll-arrow');
-      if (window.scrollY > 100) {
-        arrow.classList.remove('hidden');
-        arrow.classList.add('visible');
-      } else {
-        arrow.classList.remove('visible');
-        arrow.classList.add('hidden');
-      }
-    });
 </script>
 
 <%- include('../partials/footer') %>

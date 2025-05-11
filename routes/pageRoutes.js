@@ -40,7 +40,7 @@ router.get('/contact', (req, res) => {
 });
 
 // Contact (POST)
-router.post('/contact', (req, res) => {
+router.get('/contact', (req, res) => {
   const { name, email, message } = req.body;
   
   // Validate input
@@ -68,6 +68,7 @@ router.post('/contact', (req, res) => {
 });
 
 // Thank You
+
  router.get('/thankyou', (req, res) => {
   res.render('pages/thankyou', { page: '' });
 });
