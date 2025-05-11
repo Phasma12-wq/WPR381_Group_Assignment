@@ -1,17 +1,39 @@
 <%- include('../partials/header') %>
+<link rel="stylesheet" href="public/css/style.css">
 
-<div class="title">
-    <h1>Welcome to the Community Portal</h1>
-</div>
 <!-- Main title for home page-->
-<div class="main">
-    <p>This is where you'll find updates and upcoming events.</p>
-</div>
+<section class="hero">
+    <h1 class="hero-title">StreetSync</h1>
+    <div class="scroll-arrow" onclick="scrollToSection()">↓</div>
+  </section>
 
-<!-- arrow to appear when scroling down -->
-<div id="scroll-arrow" class="scroll-arrow hidden">
-  ↓
-</div>
+    <script>
+    function scrollToSection() {
+      document.getElementById("upcoming").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+  <section class="upcoming-section" id="upcoming">
+    <h2>Upcoming events will be displayed here</h2>
+  </section>
+  
+<div class="grid-container">
+    <div class="grid-item1">About Us</div>
+    <div class="grid-item2">Our Team</div>
+    <div class="grid-item3"></div>
+    <div class="grid-item4"><video autoplay>
+      <source src="/images/flyby.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div class="grid-item5"></div>
+    <div class="grid-item6">
+      <div id="events">Events</div>
+    </div>
+    <div class="grid-item7"></div>
+    <div class="grid-item8">Contact Us</div>
+    <div class="grid-item9"></div>
+    <div class="grid-item11"></div>
+  </div>
 
 <!-- find a way to add it to the js file -->
 <script>
