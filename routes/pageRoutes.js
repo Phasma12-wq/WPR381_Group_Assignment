@@ -8,16 +8,19 @@ const router = express.Router();
 var contacts = [];
 
 const team = [
-  { name: "Name", role: "Team Lead" },
-  { name: "Name", role: "Backend Dev" },
-  { name: "Name", role: "Data Manager" },
-  { name: "Name", role: "Docs" }
+  { name: "Ulrigh Oosthuizen", role: "Team Lead", number: 1, image: "/images/tire-change.jpg"},
+  { name: "Gordon Mullin", role: "Backend Dev", number: 2, image: "/images/tire-change.jpg"},
+  { name: "Bernardt Dawidt van Greunen", role: "Data Manager", number: 3, image: "/images/tire-change.jpg"},
+  { name: "Carmen Walliser", role: "Docs", number: 4, image: "/images/tire-change.jpg"}
 ];
 
 const events = [
-    { "title": "Park Cleanup", "date": "2025-05-10", "location": "Greenfield Park", "image": "/images/cleanup.jpg" },
-    { "title": "Community Braai", "date": "2025-05-20", "location": "Eastlynn Hall", "image": "/images/braai.jpg" }
-]
+    { title: "GT3 Race Event", participant: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
+    { title: "F1 Race Event", participant: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
+    { title: "Nascar Race Event", participant: 40, price: 50, date: "", location: "", image: "/images/bristol-tp-3.jpg", id: "", class: "event-row", alt: "Nascar Events Photo"},
+    { title: "Moto GP Event", participant: 22, price: 40, date: "", location: "", image: "/images/bikes_Lines_up.jpg", id: "", class: "event-row reverse", alt: "MotoGP Events Photo"},
+    { title: "WRC Race Event", participant: 88, price: 45, date: "", location: "", image: "/images/wrc.jpg", id: "", class: "event-row", alt: "WRC Events Photo"}
+  ]
 
 // Home
 router.get('/', (req, res) => {
@@ -40,7 +43,7 @@ router.get('/contact', (req, res) => {
 });
 
 // Contact (POST)
-router.get('/contact', (req, res) => {
+router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
   
   // Validate input
