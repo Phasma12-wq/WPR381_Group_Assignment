@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <headers>
+        <!-- Nav bar to display on main page-->
+        <nav>
+            <ul class="nav-bar">
+                <img src="images/Logo.png" alt="StreetSync Logo" class="nav-logo">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/events" class="<%= page === 'events' ? 'active' : '' %>">Events</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
+                <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Contact</a></li>
+            </ul>
+    </headers>
