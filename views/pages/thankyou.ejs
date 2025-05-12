@@ -1,19 +1,14 @@
 <%- include('../partials/header') %>
+<link rel="stylesheet" href="public/css/style.css">
 
+<div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your message has been received.<br>We ill get back to you soon.</p>
+        <span class="redirect-msg">Redirecting to homepage in 5 seconds...</span>
+    </div>
 <h1>Thank You!</h1>
 
-<p>Your message has been received.
-    <br>
-    We will get back to you as soon as possible.
-</p>
-
-
-<!--
-    Redirects to home page after a few seconds 
--->
+<!--Redirects to home page after a few seconds -->
 <script>
-    
-    setTimeout(() => {
-        window.location.href = "/"
-    }, 5000)
+    setTimeout(() => {window.location.href = "/"}, 5000)
 </script>
