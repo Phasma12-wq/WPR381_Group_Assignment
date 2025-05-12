@@ -549,10 +549,7 @@ body {
   }
 
 
-/* Contact Page */
-
-
-/* style.css */
+/* Contacts section: */
 
 /* 1) Full-screen background image */
 .contact-body {
@@ -564,7 +561,7 @@ body {
 
 /* 2) Centering form */
 .contact-section {
-  flex: 1; /* push footer down */
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,7 +577,7 @@ body {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  color: #e0f7fa;   /* pale cyan for form text */
+  color: #e0f7fa; 
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -592,7 +589,7 @@ body {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  color: #c8e6c9;   /* light mint */
+  color: #c8e6c9; 
 }
 
 /* Fieldsets */
@@ -602,11 +599,11 @@ body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;        /* space between inputs/textareas */
+  gap: 1rem;        
 }
 
 .contact-form fieldset:focus-within {
-  border-color: #32b027;
+  border-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Legends */
@@ -614,7 +611,7 @@ body {
   padding: 0 0.5rem;
   font-size: 1.1rem;
   font-weight: 500;
-  color: black;   /* softer green */
+  color: c8e6c9; 
 }
 
 /* Inputs & textarea */
@@ -626,17 +623,13 @@ body {
   border-radius: 4px;
   padding: 0.75em 1em;
   font-size: 1rem;
-
-  /* make typed text black */
   color: #000;
-
   resize: vertical;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  /* color: rgba(255, 255, 255, 0.7); */
-  color: black;
+  color: black; 
 }
 
 .contact-form input:focus,
@@ -651,8 +644,8 @@ body {
   padding: 0.75em 2em;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #e0f7fa;   /* matches form-body text */
-  background: rgba(50, 176, 39, 0.85);
+  color: #e0f7fa; 
+  background: gray;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -660,11 +653,11 @@ body {
 }
 
 .contact-form button:hover {
-  background: rgba(50, 176, 39, 1);
+  background: #ff9900;
 }
 
 /* 4) Full-width footer override */
-footer {
+.footer {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -674,5 +667,48 @@ footer {
   bottom: 0;
 }
 
+
+/* Thank You Page*/
+.thank-you-body{
+  background: url('/images/6i7txsyii8p51.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thank-you-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #e0f7fa;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.thank-you-container h1 {
+  font-size: 3rem;
+  color: #ff9900;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.thank-you-container p {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.redirect-msg {
+  font-size: 1.2rem;
+  color: #fff;
+}
 
 
