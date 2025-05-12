@@ -8,18 +8,19 @@ const router = express.Router();
 var contacts = [];
 
 const team = [
-  { name: "Ulrigh Oosthuizen", role: "Team Lead", number: 1, image: "/images/tire-change.jpg"},
-  { name: "Gordon Mullin", role: "Backend Dev", number: 2, image: "/images/tire-change.jpg"},
-  { name: "Bernardt Dawidt van Greunen", role: "Data Manager", number: 3, image: "/images/tire-change.jpg"},
-  { name: "Carmen Walliser", role: "Docs", number: 4, image: "/images/tire-change.jpg"}
+  { name: "Ulrigh Oosthuizen", role: "Team Lead / Front End Dev", number: 1, image: "/images/tire-change.jpg"},
+  { name: "Gordon Mullin", role: "Front End Dev", number: 2, image: "/images/tire-change.jpg"},
+  { name: "Bernardt Dawidt van Greunen", role: "Data Manager / Backend Dev", number: 3, image: "/images/tire-change.jpg"},
+  { name: "Carmen Walliser", role: "Documentation Manager", number: 4, image: "/images/tire-change.jpg"}
 ];
 
 const events = [
-    { title: "GT3 Race Event", participant: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
-    { title: "F1 Race Event", participant: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
-    { title: "Nascar Race Event", participant: 40, price: 50, date: "", location: "", image: "/images/bristol-tp-3.jpg", id: "", class: "event-row", alt: "Nascar Events Photo"},
-    { title: "Moto GP Event", participant: 22, price: 40, date: "", location: "", image: "/images/bikes_Lines_up.jpg", id: "", class: "event-row reverse", alt: "MotoGP Events Photo"},
-    { title: "WRC Race Event", participant: 88, price: 45, date: "", location: "", image: "/images/wrc.jpg", id: "", class: "event-row", alt: "WRC Events Photo"}
+    { title: "GT3 Race Event", participants: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
+    { title: "F1 Race Event", participants: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
+    { title: "Nascar Race Event", participants: 40, price: 50, date: "", location: "", image: "/images/bristol-tp-3.jpg", id: "", class: "event-row", alt: "Nascar Events Photo"},
+    { title: "Moto GP Event", participants: 22, price: 40, date: "", location: "", image: "/images/bikes_Lines_up.jpg", id: "", class: "event-row reverse", alt: "MotoGP Events Photo"},
+    { title: "WRC Race Event", participants: 88, price: 45, date: "", location: "", image: "/images/wrc.jpg", id: "", class: "event-row", alt: "WRC Events Photo"},
+    { title: "Car Meet Event", participants: 200, price: 10, date: "", location: "", image: "/images/car_meet.jpg", id:"", class: "event-row reverse", alt: "Meet Event Photo"}
   ]
 
 // Home
