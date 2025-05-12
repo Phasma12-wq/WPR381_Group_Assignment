@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contact</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <%- include('../partials/header') %>
 </head>
 <body class="contact-body">
+<<<<<<< Updated upstream
     <div class="contacts">
 
         
@@ -14,18 +17,26 @@
         Posts Contact Details to the backend to be displayed on the terminal    
     -->
     <form method="POST" action="/contact">
+=======
+    <section class="contact-section">
+    <form class="contact-form" method="POST" action="/contact">
+        <h1>Get in Touch</h1>
+
+>>>>>>> Stashed changes
         <fieldset>
-        <legend>Contact Information</legend>
+        <legend>Contact Info</legend>
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         </fieldset>
+
         <fieldset>
-        <legend>Message</legend>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <legend>Your Message</legend>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
         </fieldset>
-        <button type="submit">Send</button>
+
+        <button type="submit">Send Message</button>
     </form>
-    </div>
+    </section>
 
     <%- include('../partials/footer') %>
 </body>
