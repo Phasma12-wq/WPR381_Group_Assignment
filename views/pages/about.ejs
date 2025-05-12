@@ -1,3 +1,5 @@
+<!-- Renders the Header -->
+
 <%- include('../partials/header') %>
 
 <link rel="stylesheet" href="/css/style.css">
@@ -10,7 +12,7 @@
 <body class="no-bg">
 
 
-    <!-- About Us Section -->
+<!-- About Us Section -->
 <section class="intro-section">
     <h2 class="intro-title">WE ARE [GROUP NAME]</h2>
     <img src="/images/pit-stop-precision-stockcake.jpg" alt="Intro Image" class="intro-image">
@@ -26,6 +28,10 @@
 <!-- OUR TEAM -->
     <section class="team-section">
     <h2 class="section-title">OUR PIT CREW</h2>
+
+    <!--
+        Renders the team member section at the bottom of the page
+    -->
     <div class="team-grid">
 
         <% data.forEach(member => { %>
@@ -40,6 +46,7 @@
 
     </div>
     </section>
+<!-- Renders the Footer -->
 <%- include('../partials/footer') %>
 </body>
 </html>
