@@ -3,7 +3,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 //In-memory array for contacts
 var contacts = [];
 
@@ -15,12 +14,12 @@ const team = [
 ];
 
 const events = [
-    { title: "GT3 Race Event", participants: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
-    { title: "F1 Race Event", participants: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
-    { title: "Nascar Race Event", participants: 40, price: 50, date: "", location: "", image: "/images/bristol-tp-3.jpg", id: "", class: "event-row", alt: "Nascar Events Photo"},
-    { title: "Moto GP Event", participants: 22, price: 40, date: "", location: "", image: "/images/bikes_Lines_up.jpg", id: "", class: "event-row reverse", alt: "MotoGP Events Photo"},
-    { title: "WRC Race Event", participants: 88, price: 45, date: "", location: "", image: "/images/wrc.jpg", id: "", class: "event-row", alt: "WRC Events Photo"},
-    { title: "Car Meet Event", participants: 200, price: 10, date: "", location: "", image: "/images/car_meet.jpg", id:"", class: "event-row reverse", alt: "Meet Event Photo"}
+    { title: "GT3 Events", participants: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
+    { title: "F1 Events", participants: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
+    { title: "Nascar Events", participants: 40, price: 50, date: "", location: "", image: "/images/bristol-tp-3.jpg", id: "", class: "event-row", alt: "Nascar Events Photo"},
+    { title: "Moto GP Events", participants: 22, price: 40, date: "", location: "", image: "/images/bikes_Lines_up.jpg", id: "", class: "event-row reverse", alt: "MotoGP Events Photo"},
+    { title: "WRC Events", participants: 88, price: 45, date: "", location: "", image: "/images/wrc.jpg", id: "", class: "event-row", alt: "WRC Events Photo"},
+    { title: "Car Meet Events", participants: 200, price: 10, date: "", location: "", image: "/images/car_meet.jpg", id:"", class: "event-row reverse", alt: "Meet Event Photo"}
   ]
 
 // Home

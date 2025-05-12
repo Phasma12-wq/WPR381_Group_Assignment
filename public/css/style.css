@@ -127,6 +127,7 @@ body {
   padding: 60px 30px;
   background-color: #111;
   color: #f5f5f5;
+  margin-bottom: 100px;
 }
 
 .welcome-message h1 {
@@ -150,7 +151,7 @@ body {
   margin: 40px auto;
   background-color: #fff;
   border-radius: 20px;
-  padding: 40px 20px;
+  padding: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
@@ -167,13 +168,20 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-areas: 'row11 row11 row13 row14 row14'
+    grid-template-areas: 'row11 row11 row14 row14 row14'
                         'row21 row21 row22 row22 row24'
                         'row31 row32 row32 row33 row33';
+    padding-top: 10%;
+    gap:2%;
+    background: #ffffff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.77) 24%, rgba(255, 255, 255, 1) 46%, rgba(255, 255, 255, 1) 100%);
+    padding-left: 2%;
+    padding-right: 2%;
   }
 .grid-container a{
   text-decoration: none;
   color: White;
+  font-weight: bold;
 }
 #contact{
   color: black;
@@ -186,9 +194,8 @@ body {
     background-color: #111;
     text-align: center;
     padding: 180px;
-    color: #fff;
-    font-weight: bolder;
     font-size: 20px;
+    border-radius: 0.6rem;
 }
 
 .grid-item2{
@@ -201,41 +208,38 @@ body {
     padding: 40px;
     font-size: 20px;
     font-weight: bolder;
+    border-radius: 0.6rem;
 }
 
-.grid-item3{
-    grid-area: row13;
-    background-color: #fff;
-    text-align: center;
-    padding: 40px;
-    background-image: url('/images/diagonal-lines.jpg');
-}
 
 .grid-item4{
     grid-area: row14;
-    background-color: #000000;
-    text-align: center;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 18px;
+    border-radius: 0.6rem;
 }
 
 .grid-item5{
     grid-area: row21;
-    background-color: #fff;
-    background-image: url('/images/pexels-georgesultan-11876706.jpg');
+    background-image: url('/images/side_image2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: 200px;
-    color: white;
-    text-align: center;
+    background-size: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    border-radius: 0.6rem;
 }
 
 .grid-item6{
     grid-area: row22;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,9 +248,10 @@ body {
     padding: 40px;
     font-size: 20px;
     font-weight: bolder;
-    background-image: url('/images/events.jpeg');
+    background-image: url('/images/topo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0.6rem;
 }
 
 #events{
@@ -259,26 +264,26 @@ body {
 
 .grid-item11{
     grid-area: row24;
-    background-image: url('/images/535820fc1f9b787041dc0dcc329f8b9b.jpg');
+    background-image: url('/images/side_image.jpeg');
     background-size: 700px 1000px;
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
-    color: white;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    border-radius: 0.6 0.6 0 0rem;
 }
 
 .grid-item7{
     grid-area: row31;
-    background-color: #fff;
     text-align: center;
     padding: 40px;
     background-image: url('/images/checkered-flag-background-vector.jpg');
     background-size: 527px;
+    border-radius: 0.6rem;
 }
 
 .grid-item8{
@@ -291,15 +296,16 @@ body {
     padding: 40px;
     font-size: 20px;
     font-weight: bolder;
+    border-radius: 0.6rem;
 }
 
 .grid-item9{
     grid-area: row33;
-    background-color: #fff;
     text-align: center;
     padding: 40px;
     background-image: url('/images/checkered-flag-background-vector.jpg');
     background-size: 527px;
+    border-radius: 0.6rem;
 }
 .grid-item:hover {
     transform: scale(1.05);
@@ -344,33 +350,6 @@ body {
 
 .footer-socials a:hover {
   color: #ff9900;
-}
-
-/* Contct */
-.contact-container {
-  box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    background-color: white;
-}
-.contact-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #333;
-  background-image: none;
-  color: #fff;
-}
-.form-title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
 }
 
 /* About us */
@@ -551,13 +530,26 @@ body {
 
 /* Contacts section: */
 
+
+/* .form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}  */
+
+
 /* 1) Full-screen background image */
 .contact-body {
+  
   background: url('/images/6i7txsyii8p51.jpg') no-repeat center center/cover;
+  height: 100vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
+  justify-content: center;
+} 
 
 /* 2) Centering form */
 .contact-section {
@@ -565,13 +557,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 9%;
 }
 
 /* 3) Glass-morphic form */
 .contact-form {
-  width: 100%;
-  max-width: 420px;
+  width: 90vw;        /* 90% of the viewport’s width */
+  max-width: 800px; 
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: 2rem;
@@ -580,7 +572,7 @@ body {
   color: #e0f7fa; 
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 /* Heading */
@@ -603,7 +595,7 @@ body {
 }
 
 .contact-form fieldset:focus-within {
-  border-color: rgba(0, 0, 0, 0.7);
+  border-color: #ff9900;
 }
 
 /* Legends */
@@ -655,18 +647,6 @@ body {
 .contact-form button:hover {
   background: #ff9900;
 }
-
-/* 4) Full-width footer override */
-.footer {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  position: relative;
-  bottom: 0;
-}
-
 
 /* Thank You Page*/
 .thank-you-body{

@@ -1,22 +1,12 @@
 <%- include('../partials/header') %>
 <link rel="stylesheet" href="public/css/style.css">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Events</title>
-</head>
-<body>
-    <section class="events-section">
+<section class="events-section">
 
     <!-- Renders the Event details -->
     <% data.forEach(event => { %>
 
-            <!-- 
-                To properly work with existing CSS code, the certain element class names and id's are
-                also provided from the backend
-            -->
+            <!-- To properly work with existing CSS code, the certain element class names and id's are also provided from the backend -->
             <div class="<%=event.class%>" id="<%=event.id%>">
                 <img src="<%=event.image%>" alt="<%=event.alt%>">
                 <div class="event-info">
@@ -29,8 +19,6 @@
 
     <% }) %>
 
-    </section>
+</section>
 
-</body>
 <%- include('../partials/footer') %>
-</html>
