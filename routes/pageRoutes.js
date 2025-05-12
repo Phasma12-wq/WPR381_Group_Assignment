@@ -7,10 +7,10 @@ const router = express.Router();
 var contacts = [];
 
 const team = [
-  { name: "Ulrigh Oosthuizen", role: "Team Lead / Front End Dev", number: 1, image: "/images/tire-change.jpg"},
-  { name: "Gordon Mullin", role: "Front End Dev", number: 2, image: "/images/tire-change.jpg"},
-  { name: "Bernardt Dawidt van Greunen", role: "Data Manager / Backend Dev", number: 3, image: "/images/tire-change.jpg"},
-  { name: "Carmen Walliser", role: "Documentation Manager", number: 4, image: "/images/tire-change.jpg"}
+  { name: "Ulrigh Oosthuizen", role: "Team Lead / Front End Dev", number: 1, image: "/images/helmet.png"},
+  { name: "Gordon Mullin", role: "Front End Dev", number: 2, image: "/images/wheel.png"},
+  { name: "Bernardt Dawidt van Greunen", role: "Data Manager / Backend Dev", number: 3, image: "/images/gear.png"},
+  { name: "Carmen Walliser", role: "Documentation Manager", number: 4, image: "/images/flag.png"}
 ];
 
 const events = [
