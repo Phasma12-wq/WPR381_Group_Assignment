@@ -6,6 +6,8 @@ const router = express.Router();
 //In-memory array for contacts
 var contacts = [];
 
+
+//Array used to disply team info in about us page
 const team = [
   { name: "Ulrigh Oosthuizen", role: "Team Lead / Front End Dev", number: 1, image: "/images/helmet.png"},
   { name: "Gordon Mullin", role: "Front End Dev", number: 2, image: "/images/wheel.png"},
@@ -13,6 +15,7 @@ const team = [
   { name: "Carmen Walliser", role: "Documentation Manager", number: 4, image: "/images/flag.png"}
 ];
 
+//Array used to display event info dynamicly on the events page
 const events = [
     { title: "GT3 Events", participants: 20, price: 40, date: "", location: "", image: "/images/GT3.jpg", id: "GT3", class: "event-row", alt: "GT3 Events Photo"},
     { title: "F1 Events", participants: 20, price: 100, date: "", location: "", image: "/images/cars_Lined_up2.jpg", id: "", class: "event-row reverse", alt: "F1 Events Photo"},
