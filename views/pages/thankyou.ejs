@@ -1,6 +1,10 @@
+<!-- Include shared header partial-->
 <%- include('../partials/header') %>
+
+<!-- CSS Link -->
 <link rel="stylesheet" href="public/css/style.css">
 
+<!-- Thank You Page Container with full-screen background -->
 <div class = "thank-you-body">
     <div class="thank-you-container">
         <h1>Thank You!</h1>
@@ -10,9 +14,10 @@
     </div>
 </div>
 
-<!--Redirects to home page after a few seconds -->
+<!--Script redirects user to home page after a few seconds -->
 <script>
     setTimeout(() => {window.location.href = "/"}, 5000)
 </script>
 
+<!-- Include shared footer partial -->
 <%- include('../partials/footer') %>

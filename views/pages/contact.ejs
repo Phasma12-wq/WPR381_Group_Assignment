@@ -1,28 +1,36 @@
+<!-- Include shared header partial-->
 <%- include('../partials/header') %>
+
+<!-- Page Title and CSS Link -->
     <title>Contact</title>
     <link rel="stylesheet" href="/css/style.css" />
+
 </head>
+<!-- Apply full-screen background styling -->
 <body class="contact-body">
+    <!-- Contact Form Section -->
     <section class="contact-section">
-    <form class="contact-form" method="POST" action="/contact">
-        <h1>Get in Touch</h1>
+        <form class="contact-form" method="POST" action="/contact">
+            <h1>Get in Touch</h1>
 
-        <fieldset>
-        <legend>Contact Info</legend>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        </fieldset>
+            <!-- Contact Info Fieldset -->
+            <fieldset>
+                <legend>Contact Info</legend>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+            </fieldset>
 
-        <fieldset>
-        <legend>Your Message</legend>
-        <textarea name="message" placeholder="How can we help?" required></textarea>
-        </fieldset>
+            <!-- Message Fieldset -->
+            <fieldset>
+                <legend>Your Message</legend>
+                <textarea name="message" placeholder="How can we help?" required></textarea>
+            </fieldset>
 
-        <button type="submit">Send Message</button>
-    </form>
-
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
     </section>
-
 </body>
 
+<!-- Include shared footer partial -->
 <%- include('../partials/footer') %>

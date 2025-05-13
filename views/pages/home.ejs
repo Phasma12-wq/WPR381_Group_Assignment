@@ -1,50 +1,64 @@
+<!-- Include shared header partial-->
 <%- include('../partials/header') %>
+
+<!-- CSS Link -->
 <link rel="stylesheet" href="public/css/style.css">
 
-<!-- Main title for home page-->
+<!-- Main title section with Logo and Brand Name-->
 <section class="main-title">
   <div class="title-overlay">
     <div class="title-brand">
-      <img src="images/logo.png" alt="StreetSync Logo" class="title-logo">
-      <h1 class="main-title-name" onclick="scrollToWelcome()">StreetSync</h1>
+      <img src="images/logo.png" alt="StreetSync Logo" class="title-logo"> <!-- Site logo -->
+      <h1 class="main-title-name" onclick="scrollToWelcome()">StreetSync</h1> <!-- Title with the smooth scroll trigger -->
     </div>
   </div>
 </section>
 
+<!-- Welcome Message Section -->
 <div class="welcome-message" id="welcome">
   <h1>Welcome to StreetSync</h1>
   <p>Your pit stop for everything cars, from community meets and roaring races to street showcases and build diaries. Whether you're a gearhead, tuner, racer, or just love the sound of a turbo spool, you're in the right lane.</p>
   <p>Fuel your passion. Sync with the streets.</p>
 </div>
 
+<!-- Placeholder for Upcoming Events -->
 <section class="upcoming-events" id="upcoming">
   <h2>Upcoming events will be displayed here</h2>
 </section>
-  
+
+<!-- Grid Navigation Block -->
 <div class="grid-container">
     <div class="grid-item1">
       <a href="/about">About Us</a>
     </div>
 
     <div class="grid-item2">"Fueled by passion, driven by code, we're the crew behind the wheel of StreetSync, building every pixel like it's a pit stop before the podium."</div>
+
     <div class="grid-item3"></div>
+
     <div class="grid-item4">
       <div id="events">
         <a href="/events">Events</a>
       </div>
     </div>
+
     <div class="grid-item5"></div>
+
     <div class="grid-item6">
       <a href="/contact" id="contact">Contact Us</a>
     </div>
+
     <div class="grid-item7"></div>
+
     <div class="grid-item8"></div>
   </div>
 
+<!-- JavaScript for smooth scroll when clicking on the StreetSync logo/title -->
 <script>
     function scrollToWelcome() {
       document.getElementById("welcome").scrollIntoView({ behavior: "smooth" });
     }
 </script>
 
+<!-- Include shared footer partial -->
 <%- include('../partials/footer') %>

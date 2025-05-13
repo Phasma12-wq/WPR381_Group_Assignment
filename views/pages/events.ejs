@@ -1,4 +1,7 @@
+<!-- Include shared header partial-->
 <%- include('../partials/header') %>
+
+<!-- CSS Link -->
 <link rel="stylesheet" href="public/css/style.css">
 
 <section class="events-section">
@@ -6,7 +9,7 @@
     <!-- Renders the Event details -->
     <% data.forEach(event => { %>
 
-            <!-- To properly work with existing CSS code, the certain element class names and id's are also provided from the backend -->
+            <!-- To properly work with existing CSS code, the certain element class names and ids are also provided from the backend -->
             <div class="<%=event.class%>" id="<%=event.id%>">
                 <img src="<%=event.image%>" alt="<%=event.alt%>">
                 <div class="event-info">
@@ -21,4 +24,5 @@
 
 </section>
 
+<!-- Include shared footer partial -->
 <%- include('../partials/footer') %>
