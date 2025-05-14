@@ -43,6 +43,12 @@ This web application provides:
 ├── README.md
 └── package.json
 ```
+## Github Repository
+
+[\[Repository URL\]](https://github.com/Phasma12-wq/WPR381_Group_Assignment)
+
+cd WPR381_GROUP_ASSIGNMENT 
+Navigate to the project directory: USe this command in the VS Code Terminal to navigate into the project root directory, if it is not already there.
 
 ## Setup Instructions
 
